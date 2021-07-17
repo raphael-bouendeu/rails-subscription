@@ -11,14 +11,8 @@
   </head>
   <body>
     <div class="container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= link_to root_path do %>
-        <i class="far fa-gem fa-spin fa-3x"></i>
-        Home
-      <% end %>
-      <%= link_to 'Terms', privacy_path %>
-      <%= link_to 'Privacy', terms_path %>
+      <%= render 'layouts/message' %>
+      <%= render 'layouts/header' %>
       <%= yield %></div>
   </body>
 </html>
