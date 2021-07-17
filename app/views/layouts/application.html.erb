@@ -11,9 +11,12 @@
   </head>
   <body>
     <div class="container">
-    <%= link_to 'Home', root_path %>
+      <%= link_to root_path do %>
+        <i class="far fa-gem fa-spin fa-3x"></i>
+        Home
+      <% end %>
       <%= link_to 'Terms', privacy_path %>
-        <%= link_to 'Privacy', terms_path %>
+      <%= link_to 'Privacy', terms_path %>
       <%= yield %></div>
   </body>
 </html>
