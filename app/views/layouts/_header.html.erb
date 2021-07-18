@@ -14,7 +14,11 @@
           Home
         <% end %>
         <% if current_user %>
-        <%= deep_active_link_to posts_path do %>
+          <%= deep_active_link_to  new_post_path do %>
+            <div class="fa fa-plus"></div>
+           New Posts
+          <% end %>
+          <%= deep_active_link_to posts_path do %>
             <div class="fa fa-gem"></div>
             Posts
           <% end %>
@@ -32,7 +36,7 @@
               <b><%= current_user.email %></b>
             </a>
             <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
-            <%= deep_active_link_to_dropdown_item user_path(current_user) do %>
+              <%= deep_active_link_to_dropdown_item user_path(current_user) do %>
                 <div class="fa fa-user"></div>
                 <b>My Profile</b>
               <% end %>

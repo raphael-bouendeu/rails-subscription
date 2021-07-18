@@ -7,13 +7,16 @@
 
 <p>
   <strong>Body:</strong>
-  <%= @post.body %>
+ <%= simple_format(@post.body) %>
 </p>
-
+On: <%=@post.created_at.strftime('%d %b %Y') %>
 <p>
   <strong>User:</strong>
-  <%= @post.user_id %>
+by:  <%= link_to @post.user.email,@post.user %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<br/>
+<%= link_to 'Edit', edit_post_path(@post) %>
+ <%= link_to 'Destroy', post_path(@post),method: :delete,data: {confirm: "are you sure?"} %>
+  <br>
+ <%= link_to 'Back', posts_path %>
