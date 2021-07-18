@@ -1,5 +1,8 @@
-<%=user.id%>
-<%= link_to_unless_current user.email ,user %><br>
+
+<%='email'.humanize%>: <%= link_to_unless_current user.email ,user %>
+<br>
+<%="id".humanize%>: <%=user.id%>
+<br>
 <%='sign_in_count'.humanize%>: <%=user.sign_in_count%>
 <br>
 <%='current_sign_in_at'.humanize%>: <%=user.current_sign_in_at%>
