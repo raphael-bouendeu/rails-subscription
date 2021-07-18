@@ -1,0 +1,7 @@
+<h4>
+Users Count ist:<%=@users.count %>
+</h4>
+
+<%@users.each do |user|%>
+<%= render 'users/user',user: user %>
+<%end%>
