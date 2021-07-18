@@ -7,6 +7,10 @@ Users Count ist:<%=@users.count %>
   <strong>Email</strong>
 <% end %>
 
+<%= sort_link(@q, :creatd_at) do %>
+  <strong>Created</strong>
+<% end %>
+
 <%= search_form_for @q do |f| %>
 
   <%= f.label :email_cont %>
