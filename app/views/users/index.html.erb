@@ -10,6 +10,9 @@ Users Count <%=@users.count %>
 <%= sort_link(@q, :creatd_at) do %>
   <strong>Created</strong>
 <% end %>
+<%= sort_link(@q, :posts_count,default_order: :desc) do %>
+  <strong>Post count</strong>
+<% end %>
 
 <%= search_form_for @q do |f| %>
 
