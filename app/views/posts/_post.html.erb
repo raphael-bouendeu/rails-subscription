@@ -1,10 +1,12 @@
 <h3>
 <%= link_to post.title, post %>
 </h3>
- <%= simple_format(post.body) %>
+<%= markdown(post.body) %>
 
  By:<%= link_to post.user.email,post.user %><br>
  On: <%=post.created_at.strftime('%d %b %Y') %>
+ <br>
+ <%= premium_label(post.premium)%>
 <br>
  <%= link_to 'Edit', edit_post_path(post) %>
 

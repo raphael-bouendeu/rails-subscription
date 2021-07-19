@@ -2,6 +2,7 @@
 <h4>
 Posts Count <%=@posts.count %>
 </h4>
+<%== pagy_bootstrap_nav(@pagy) if @pagy.pages > 1 %><br>
 <%@posts.each do |post|%>
 <%= render 'posts/post',post: post %>
 <hr>
