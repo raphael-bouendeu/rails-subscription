@@ -57,3 +57,5 @@ gem 'devise', '~> 4.8'
 gem 'pagy', '~> 4.10', '>= 4.10.1'
 gem 'ransack'
 gem "redcarpet"
+gem 'stripe', '~> 5.37'
+gem 'dotenv-rails', groups: [:development, :test]
